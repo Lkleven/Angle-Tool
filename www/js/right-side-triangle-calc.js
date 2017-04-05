@@ -187,7 +187,7 @@ function handleOrientation(gamma, beta, alpha){
 
 	//document.getElementById("doDirection").innerHTML = alpha;
 	//document.getElementById("doTiltLR").innerHTML = gamma;
-	document.getElementById("angle").innerHTML = measuredAngle;
+	document.getElementById("angle").innerHTML = measuredAngle  +"" +"&deg;";
 	if(toCalculator){
 		document.getElementById("angleV").value=(measuredAngle);
 		toCalculator = false;
@@ -282,7 +282,7 @@ window.onload = function(){
 		
 	
 	if(window.DeviceOrientationEvent){
-		document.getElementById("angleMeasure").innerHTML = "Device Orientation";
+		//document.getElementById("angleMeasure").innerHTML = "Device Orientation";
 
 		window.addEventListener("deviceorientation", function(eventData){
 
