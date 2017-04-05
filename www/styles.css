@@ -1,0 +1,191 @@
+body{
+	font-family: Calibri;
+	font-size: 20px;
+	width: 100%;
+	text-shadow: none !important;
+}
+
+h1{
+	font-size: 30px 	!important;
+	padding: 8px 0 0 0 !important;
+	margin: 0 			!important; 
+	color: #fff;
+}
+
+
+#logo{
+	height: 50px;
+	width: 50px;
+	padding-top: 2px;
+}
+
+
+form{
+	font-size: 20px;
+	background-color: #009de0;
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    padding: 0px;
+    text-align:right;
+}
+
+label{
+    font-size: 20px 	!important;
+    font-weight: normal !important;
+    margin: 0 			!important;
+    text-shadow: none 	!important;
+    line-height: 60px 	!important;
+    color: #fff;
+    height: 40px;
+    width: 140px;
+    text-align: right;
+    float:left;
+}
+
+.ui-input-text{
+	margin: 9px 20px 0 0 !important;
+	width: 100px;
+	height: 30px !important;
+    float:right;
+    background-color: red;
+}
+
+.numbah{
+	position: relative !important;
+	top: -4px;
+	margin:  0 !important;
+	line-height: 30px !important;
+	/*min-height: 0px !important;*/
+	text-shadow: none !important;
+}
+
+
+input{
+	height: 30px !important;
+}
+
+.form-group{
+	outline: 1px solid #fff;
+	display: block;
+	height: 50px;
+}
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+#container{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	/*border: solid 1px red;*/
+}
+
+button{
+	border: none !important;
+	box-shadow: 0px 5px 5px #333 !important;
+	width: 40% !important;
+	height: 40px;
+	margin: 10px 5px !important;
+	background-color: #0084bc !important;
+	/*background: linear-gradient(#009de0, #0245ff);*/
+	color: white;
+	font-size: 20px !important;
+	text-shadow: none !important;
+	color: #fff !important;
+	display: inline-block !important;
+	padding: 0px !important;
+}
+
+button:active{
+	position: relative;
+	bottom: -1px;
+	box-shadow: 0px 4px 5px #333;
+	background-color: #009de0 !important;
+	color: #fc3 !important;
+}
+
+#trekant{
+	width: 50%;
+	/*height: 130px;*/
+	margin: -20px 0 10 0;
+}
+
+p{
+	font-family: Calibri;
+	font-size: 20px;
+	color: #009de0;
+	margin: 0;
+}
+
+p strong{
+	color: #333;
+}
+
+#header{
+	background-color: #009de0;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	border: none;
+}
+
+#footer{
+	position: absolute !important;
+	border: none !important;
+	bottom: 0px;
+	width: 100%;
+	margin: 0, auto;
+	text-align: center;
+}
+
+a.footerButton{
+
+	height: 58px;
+	width: 50%;
+	margin: 0;
+	box-shadow: none;
+	border: 1px solid #666;
+	box-sizing: border-box;
+	background: #222;
+	color: #FFF;
+	border-radius: 0px !important;
+}
+
+a#toCalc{
+	border-bottom: 8px solid #009de0;
+}
+
+.footerButton img{
+	width: 40px;
+}
+
+
+/* PAGE2, angle */
+
+#angle{
+	font-size: 120px;
+}
+
+#angleText{
+	font-size: 40px;
+	color: #333;
+}
+
+#pageTwo button{
+	text-align: center;
+	width: 40% !important;
+	margin: 0 auto !important;
+}
+

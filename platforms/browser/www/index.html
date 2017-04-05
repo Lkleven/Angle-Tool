@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Angle Tool</title>
+
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">  -->
+	<link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<script src="js/right-side-triangle-calc.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+
+    </head>
+
+    <body>
+    	
+	<div data-role="header" id="header"> 
+		<!--<img src="images/icopal-logo.png" id="logo">-->
+		<h1>Vinkelkalkulator</h1>
+	</div>
+	<div data-role="page" id="pageOne">
+
+		<div id="container" data-role="main">
+			<p id="top">Fyll in <strong>2</strong> av <strong>4</strong> verdier</p>
+			<br>
+
+			<img src="images/trekant.png" id="trekant" alt="trekant">
+
+			<form>
+				<div id="inputContainer">
+
+					<div class="form-group">
+						<label for="legA" class="inputz">Kateter A </label>
+							<input type ="number" placeholder="0" id="legA" class="numbah"/>		
+					</div>
+					
+					<div class="form-group">
+						<label for="legB" class="inputz">Kateter B </label>
+						<input type ="number" placeholder="0" id="legB" class="numbah"/>
+					</div>
+
+					<div class="form-group">
+						<label for="hypC" class="inputz">Hypotenus C </label> 
+						<input type ="number" placeholder="0" id="hypC" class="numbah"/>
+					</div>
+
+					<div class="form-group">
+						<label for="angleV" class="inputz">Vinkel V </label>
+						<input type ="number" placeholder="0" id="angleV" class="numbah"/>
+					</div>
+					
+				</div> <!-- container -->
+			</form>
+			<button type="button" id="calculate">Kalkuler</button>
+			<button type="button" id="empty">Tøm</button>
+
+			
+
+		</div>
+
+		
+	</div> <!-- page END -->
+
+	<div data-role="footer" id="footer"> 
+		<a href="#pageOne" data-transition="slide" data-direction="reverse" class="footerButton" id="calculatorBtn"><img src="images/calc.png" id="pageOneBtn"></a
+		><a href="#pageTwo" data-transition="slide"  class="footerButton" id="angleToolBtn"><img src="images/angle.png" id="pageOneBtn"></a>
+	</div>
+
+
+	<div data-role="page" id="pageTwo">
+		<div id="container" data-role="main">
+			<h2 id="angleMeasure"></h2>
+
+			<p id="angleText">Vinkel: <p id="angle"></p></p>
+			<button type="button" id="measureAngle">Sett inn</button>
+			<!--<table>
+				<tr>
+					<td>Event Supported</td>
+					<td id="doEvent"></td>
+				</tr>
+				<tr>
+					<td>Left/Right [gamma]</td>
+					<td id="doTiltLR"></td>
+				</tr>
+				<tr>
+					<td>Front/Back [beta]</td>
+					<td id="doTiltFB"></td>
+				</tr>
+				<tr>
+					<td>Direction [alpha]</td>
+					<td id="doDirection"></td>
+				</tr>
+				<tr>
+					<td>Testline</td>
+					<td id="doTest"></td>
+				</tr>
+				<tr>
+					<td>Testline</td>
+					<td id="doTest2"></td>
+				</tr>
+			</table> -->
+		</div>
+		
+
+			
+
+				
+
+
+		
+	</div> <!-- page END -->
+
+	
+
+	<!--
+	<!--jQuery CDN (Content Delivery Network) 
+        <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+        </script>
+
+        <!-- Include the jQuery Mobile library
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+        <!-- If CDN fails to load, use the local jQuery
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='js/jquery-3.2.0.js' type='text/javascript'%3E%3C/script%3E"));
+                document.write(unescape("%3Cscript src='js/jquery.mobile-1.4.5/jquery.mobile.min' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+    -->
+
+        
+        <!-- -->
+        
+    </body>
+</html>
+
