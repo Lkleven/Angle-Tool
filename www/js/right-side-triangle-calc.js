@@ -199,13 +199,17 @@ $(function  () {
 
 
 	//Toggles "hightlight" on the latest pressed button. all others are "dark"
-	$("#footer").click(function(event){
+	$(".footerButton").click(function(event){
 		$("#footer").children("a").each(function(){
 			$(this).css("border-bottom", "none");
 
-			console.log(event.target.id + " " + this.id);
+			//if button clicked is event.target is the a href button itself
 			if(event.target.id == this.id){
 				$(event.target).css("border-bottom", "solid 8px #009de0");
+
+			//if button clicked is event.target is of the image within (child) the a href button => change borders of parent
+			}else if(event.target.parentElement.id == this.id){
+				$(event.target.parentElement).css("border-bottom", "solid 8px #009de0");
 			}
 		});
 	});
@@ -262,6 +266,13 @@ $(function  () {
   		}
   		return false;
   	});
+
+  	//Checks if jQuery Mobile script is loaded
+  	/*if($.mobile !== undefined){
+  		window.alert("Mobile");
+  	}else{
+  		window.alert("Imobile");
+  	}*/
 });
 
 window.onload = function(){
@@ -295,4 +306,14 @@ window.onload = function(){
 	}else{
 		document.getElementById("angleMeasure").innerHTML = "Not supported."
 	}
+
+
+	//Checks if jQuery script has loaded
+	/*if (window.jQuery) {  
+        // jQuery is loaded  
+        alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }*/
 };
