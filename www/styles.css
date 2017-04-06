@@ -178,6 +178,7 @@ a#toCalc{
 #angle{
 	font-size: 120px;
 	margin: 0 0 0 44px;
+	line-height: 120px;
 }
 
 #angleText{
@@ -190,4 +191,81 @@ a#toCalc{
 	width: 40% !important;
 	margin: 0 auto !important;
 }
+
+
+
+@media screen and (orientation: landscape){
+
+/* STYLES FOR PAGEONE*/
+
+#trekant{
+	width: 40%;
+	float: left;
+
+}
+
+p#top{
+	display: inline;
+	float: left;
+	margin-bottom: -10px;
+	margin-left: 5%;
+}
+
+form{
+	width: 50%;
+	float: right;
+	margin-top: -20px;
+}
+
+form-group{
+	height: 30px;
+}
+
+.ui-input-text{
+	width: 80px;
+}
+
+#calculatorButtons{
+	height: 50px;
+	display: block;
+	margin-left: 50%;
+}
+
+#calculatorButtons button{
+	margin: 5px !important;
+	width: 40% !important;
+	height: 35px !important;
+}
+
+.clearfix{
+	overflow:auto !important;
+	clear: both !important;
+}
+
+
+
+
+/* STYLES FOR PAGETWO*/
+	p#angleText{
+		position: relative;
+		display:inline;
+		bottom: 20px;
+	}
+
+	p#angle{
+		display:inline;
+	}
+}
+
+@media screen and (orientation: landscape) and (max-height: 370px) {
+
+	#calculatorButtons{
+		margin: 0;
+		display: inline-block;
+		width: 50%;
+	}
+
+	#calculatorButtons button{
+		width: 40% !important;
+	}
 
