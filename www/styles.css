@@ -163,7 +163,7 @@ a.footerButton{
 	border-radius: 0px !important;
 }
 
-a#toCalc{
+a#calculatorBtn{
 	border-bottom: 8px solid #009de0;
 }
 
@@ -194,7 +194,8 @@ a#toCalc{
 
 
 
-@media screen and (orientation: landscape){
+/*@media screen and (orientation: landscape){*/
+@media screen and (min-aspect-ratio: 13/9) {
 
 /* STYLES FOR PAGEONE*/
 
@@ -242,6 +243,10 @@ form-group{
 	clear: both !important;
 }
 
+.ui-page{
+	min-height: 240px !important;
+}
+
 
 
 
@@ -257,7 +262,7 @@ form-group{
 	}
 }
 
-@media screen and (orientation: landscape) and (max-height: 370px) {
+@media screen and (min-aspect-ratio: 13/9) and (max-height: 370px) {
 
 	#calculatorButtons{
 		margin: 0;
@@ -268,4 +273,4 @@ form-group{
 	#calculatorButtons button{
 		width: 40% !important;
 	}
-
+}

@@ -6,6 +6,9 @@ function calculate(){
 	var hypC = parseFloat(document.getElementById('hypC').value);
 	var angleV = parseFloat(document.getElementById('angleV').value);
 
+	var angleKnown = false;
+
+
 	
 
 	if(legA && legB){
@@ -26,20 +29,22 @@ function calculate(){
 		
 	}else if(legB && angleV){
 		//window.alert("5");
+		angleKnown = true;
 		KnownLegBAndAngleV(legB, angleV);
 		
 	}else if(hypC && angleV){
 		//window.alert("6");
+		angleKnown = true;
 		KnownHypotenuseAndAngleV(hypC, angleV);
 
 	}else{
 		return window.alert("Fyll inn to verdier");
 	}
-
-	//window.alert("7");
-	calculateAngleV(parseFloat(document.getElementById("legB").value), 
-					parseFloat(document.getElementById('hypC').value),
-					parseFloat(document.getElementById('angleV').value));
+	if(!angleKnown){
+		calculateAngleV(parseFloat(document.getElementById("legB").value), 
+						parseFloat(document.getElementById('hypC').value),
+						parseFloat(document.getElementById('angleV').value));
+	}
 }
 
 function KnownLegs(legA, legB){
@@ -47,7 +52,7 @@ function KnownLegs(legA, legB){
 	var b = Math.pow(legB,2);
 
 	var c = Math.sqrt(a+b)
-	c = twoDecimals(c);
+	c = oneDecimal(c);
 	document.getElementById("hypC").value = c;
 	highlightBox("hypC");
 }
@@ -61,7 +66,7 @@ function KnownLegAndHypotenuse(leg, hypotenuse){
 
 	var temp = c - a;
 	var b = Math.sqrt(temp);
-	b = twoDecimals(b);
+	b = oneDecimal(b);
 
 
 	if(document.getElementById('legA').value > 0){
@@ -75,7 +80,7 @@ function KnownLegAndHypotenuse(leg, hypotenuse){
 
 function KnownHypotenuseAndAngleV(hypotenuse, angleV){
 	var opposite = Math.sin(degreeToRad(angleV)) * hypotenuse;
-	opposite = twoDecimals(opposite);
+	opposite = oneDecimal(opposite);
 
 	document.getElementById("legA").value = opposite;
 	highlightBox("legA");
@@ -85,7 +90,7 @@ function KnownHypotenuseAndAngleV(hypotenuse, angleV){
 
 function KnownLegBAndAngleV(leg, angleV){
 	var legA = Math.tan(degreeToRad(angleV)) * leg;
-	legA = twoDecimals(legA);
+	legA = oneDecimal(legA);
 
 	document.getElementById("legA").value = legA;
 	highlightBox("legA");
@@ -95,7 +100,7 @@ function KnownLegBAndAngleV(leg, angleV){
 
 function KnownLegAAndAngleV(leg, angleV){
 	var hypC = leg / Math.sin(degreeToRad(angleV));
-	hypC = twoDecimals(hypC);
+	hypC = oneDecimal(hypC);
 
 	document.getElementById("hypC").value = hypC;
 	highlightBox("hypC");
@@ -104,10 +109,10 @@ function KnownLegAAndAngleV(leg, angleV){
 }
 
 function calculateAngleV(adjacent, hypotenuse, angle){
-	if(angle){
+	/*if(angle){
 		unHighlightBox("angleV");
 		return;
-	}
+	}*/
 	var temp = adjacent/hypotenuse;
 	var angle = Math.acos(temp) * 180/Math.PI;
 
@@ -183,6 +188,8 @@ function handleOrientation(gamma, beta, alpha){
 	if(measuredAngle - beta > 0.5 || measuredAngle - beta < -0.5 ){
 		measuredAngle = beta;
 	}
+
+	measuredAngle = Math.abs(measuredAngle);
 	
 
 	//document.getElementById("doDirection").innerHTML = alpha;
@@ -287,7 +294,10 @@ window.onload = function(){
 	var measure = false;
 	var lastUpdate = 0;
 
+	//sets a flag to true in order to capture the measure from the listener
+	//Clears all existing values in the calculator
 	function myMeasure(){
+		emptyValues();
 		toCalculator = true;
 	}
 		
