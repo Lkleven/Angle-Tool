@@ -188,8 +188,24 @@ a#calculatorBtn{
 
 #pageTwo button{
 	text-align: center;
-	width: 40% !important;
+	width: 40vw !important;
 	margin: 0 auto !important;
+}
+
+#pageTwo #measureAngle{
+	height: 30vw;
+}
+
+#pageTwo #insertButtonImg{
+	display: block;
+	margin: 0 auto;
+}
+
+@media screen and (min-height: 360px){
+	#angle{
+		font-size: 150px;
+		line-height: 150px;
+	}
 }
 
 
@@ -247,6 +263,10 @@ form-group{
 	min-height: 240px !important;
 }
 
+#angleText{
+	position: absolute;
+}
+
 
 
 
@@ -260,6 +280,16 @@ form-group{
 	p#angle{
 		display:inline;
 	}
+
+	#pageTwo #measureAngle{
+		height: 60px;
+	}
+
+	#pageTwo #insertButtonImg{
+		display: inline-block;
+		height: 40px;
+		margin-bottom: -12px;
+	}
 }
 
 @media screen and (min-aspect-ratio: 13/9) and (max-height: 370px) {
@@ -272,5 +302,15 @@ form-group{
 
 	#calculatorButtons button{
 		width: 40% !important;
+	}
+
+	#pageTwo #measureAngle{
+		height: 40px;
+	}
+
+	#pageTwo #insertButtonImg{
+		display: inline-block;
+		height: 30px;
+		margin-bottom: -5px;
 	}
 }

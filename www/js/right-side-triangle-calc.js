@@ -205,7 +205,7 @@ $(function  () {
 	$("[data-role='header'], [data-role='footer']").toolbar();
 
 
-	//Toggles "hightlight" on the latest pressed button. all others are "dark"
+	//Toggles "hightlight" on the latest pressed footer button. all others are "dark"
 	$(".footerButton").click(function(event){
 		$("#footer").children("a").each(function(){
 			$(this).css("border-bottom", "none");
@@ -274,6 +274,9 @@ $(function  () {
   		return false;
   	});
 
+  	
+  	
+
   	//Checks if jQuery Mobile script is loaded
   	/*if($.mobile !== undefined){
   		window.alert("Mobile");
@@ -296,11 +299,14 @@ window.onload = function(){
 
 	//sets a flag to true in order to capture the measure from the listener
 	//Clears all existing values in the calculator
+	//highlights the correct footer button for usability
 	function myMeasure(){
+		document.getElementById("calculatorBtn").style.borderBottom = "8px solid #009de0";
+		document.getElementById("angleToolBtn").style.borderBottom = "none";
 		emptyValues();
 		toCalculator = true;
 	}
-		
+
 	
 	if(window.DeviceOrientationEvent){
 		//document.getElementById("angleMeasure").innerHTML = "Device Orientation";
